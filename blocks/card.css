@@ -34,10 +34,19 @@
   border-radius: 0 0 10px 10px;
 }
 .card__like-button {
-  background: transparent url(../images/Vector\\(4\).svg) center no-repeat;
+  background: transparent url(../images/Group.svg) center no-repeat;
   width: 21px;
   height: 18px;
+  border: none;
 }
 .card__like-button:hover {
   opacity: 50%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .card__list {
+    display: grid;
+    margin: 0 auto;
+}
 }
