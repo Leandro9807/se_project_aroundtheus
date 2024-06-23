@@ -7,3 +7,5 @@ Technologies: HTML, CSS, GITHUB, FIGMA.
 Techniques: Flexbox, Grid Layouts, Media Queries, Responsive Design.
   
 Link to GitHub Pages: https://github.com/Leandro9807/se_project_aroundtheus.git
+
+Link to Project Video: https://www.loom.com/share/2222e111524a4334b4763ba3267f3b0d?sid=9630128a-d9e6-4523-90a6-6221b82717fa
