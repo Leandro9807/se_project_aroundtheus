@@ -125,6 +125,8 @@
 
   .modal__button {
     margin-bottom: 0;
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .modal__close {
