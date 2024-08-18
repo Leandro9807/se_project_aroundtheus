@@ -124,6 +124,7 @@
   }
 
   .modal__button {
+    background: transparent url(../images/Submit\ Button.svg) center no-repeat;
     margin-bottom: 0;
     font-size: 14px;
     line-height: 17px;
