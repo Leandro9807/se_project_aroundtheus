@@ -100,6 +100,12 @@
   cursor: pointer;
 }
 
+.modal__container_preview {
+  color: #fff;
+  position: relative;
+  margin: auto;
+}
+
 @media screen and (max-width: 760px) {
   .modal__container {
     max-width: 282px;
@@ -137,3 +143,4 @@
     bottom: calc(100% + 15px);
   }
 }
+
