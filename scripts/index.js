@@ -43,12 +43,20 @@ const addCardModalCloseButton = addCardModal.querySelector(".modal__close");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const addNewCardButton = document.querySelector(".profile__add-button");
+const cardImageModal = document.querySelector("#card-image-modal");
+const cardImageModalCloseButton = cardImageModal.querySelector(".modal__close");
+const cardImageModalImage = document.querySelector(".modal__image");
+const cardImageModalTitle = document.querySelector(".modal__title");
 
 // Form data
 const nameInput = profileFormElement.querySelector(".modal__input_type_name");
-const jobInput = profileFormElement.querySelector(".modal__input_type_description");
-const cardTitleInput = addCardFormElement.querySelector(".modal__input_type_title");
-const cardUrlInput = addCardFormElement.querySelector(".modal__input_type_url"); 
+const jobInput = profileFormElement.querySelector(
+  ".modal__input_type_description"
+);
+const cardTitleInput = addCardFormElement.querySelector(
+  ".modal__input_type_title"
+);
+const cardUrlInput = addCardFormElement.querySelector(".modal__input_type_url");
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
@@ -89,13 +97,25 @@ function getCardElement(data) {
     likeButton.classList.toggle("card__like-button_active");
   });
 
-   deleteButton.addEventListener("click", () => {
-     cardElement.remove();
-   });
+  deleteButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
 
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
+
+  cardImage.addEventListener("click", () => {
+    cardImageModalImage.src = data.link;
+    cardImageModalImage.alt = data.name;
+    cardImageModalTitle.textContent = data.name;
+    openModal(cardImageModal);
+  });
+
+  cardImageModalCloseButton.addEventListener("click", () =>
+    closeModal(cardImageModal)
+  );
+
 
   return cardElement;
 }
@@ -108,12 +128,14 @@ profileEditButton.addEventListener("click", () => {
   jobInput.value = profileDescription.textContent;
   openModal(editProfileModal);
 });
-profileModalCloseButton.addEventListener("click", () => closeModal(editProfileModal));
+profileModalCloseButton.addEventListener("click", () =>
+  closeModal(editProfileModal)
+);
 
 //add new card
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
-addCardModalCloseButton.addEventListener("click", () => closeModal(addCardModal));
+addCardModalCloseButton.addEventListener("click", () =>
+  closeModal(addCardModal)
+);
 
 initialCards.forEach((cardData) => renderCard(cardData, cardsWrap));
-
-
