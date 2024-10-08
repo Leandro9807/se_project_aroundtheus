@@ -108,13 +108,22 @@
 
 .modal__container_preview {
   position: relative;
-  margin: auto;
   background-color: transparent;
-  max-width: 80vw;
-  max-height: 80vh;
   width: unset;
   margin: unset;
   height: unset;
+}
+
+.modal__image {
+max-width: 433px;
+max-height: 540px;
+}
+
+.modal__title {
+Font: Inter;
+font-weight: 400;
+Size: 12px;
+Line-height: 14.52px;
 }
 
 @media screen and (max-width: 760px) {
@@ -154,11 +163,10 @@
     bottom: calc(100% + 15px);
   }
 
-  .modal__container_preview {
-    max-width: 240px;
-    max-height: 299px;
-    padding-top: 136px;
-    padding-left: 40px;
+  .modal__image {
+   max-width: 240px;
+   max-height: 299px;
   }
+  
 }
 
