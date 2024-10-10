@@ -21,14 +21,17 @@
           <img src="images/Avatar.svg" alt="avatar" class="profile__image" />
           <div class="profile__info">
             <h1 class="profile__title">Jacques Costeau</h1>
-            <button class="profile__edit-button" id="profile-edit-button" type="button"></button>
+            <button
+              class="profile__edit-button"
+              id="profile-edit-button"
+              type="button"
+            ></button>
             <p class="profile__description">Explorer</p>
           </div>
           <button class="profile__add-button" type="button"></button>
         </section>
         <section class="cards page__section">
-          <ul class="cards__list">
-          </ul>
+          <ul class="cards__list"></ul>
         </section>
         <footer class="footer page__section">
           <p class="footer__title">&#169; 2024 Around The U.S by Leo Ravelo</p>
@@ -37,49 +40,81 @@
     </div>
     <div class="modal" id="edit-modal">
       <div class="modal__container">
-        <button class="modal__close" id="profile-close-button" type="button"></button>
+        <button
+          class="modal__close"
+          id="profile-close-button"
+          type="button"
+        ></button>
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form" id="edit__profile_form">
-          <input class="modal__input modal__input_type_name" id=profile-name-input type="text" name="name" placeholder="Name">
-          <input class="modal__input modal__input_type_description" id=profile-description-input type="text" name="description" placeholder="Description">
+          <input
+            class="modal__input modal__input_type_name"
+            id="profile-name-input"
+            type="text"
+            name="name"
+            placeholder="Name"
+          />
+          <input
+            class="modal__input modal__input_type_description"
+            id="profile-description-input"
+            type="text"
+            name="description"
+            placeholder="Description"
+          />
           <button class="modal__button" type="submit">Save</button>
         </form>
       </div>
     </div>
 
-     <div class="modal" id="add-card-modal">
+    <div class="modal" id="add-card-modal">
       <div class="modal__container">
-        <button class="modal__close" id="profile-close-button" type="button"></button>
+        <button
+          class="modal__close"
+          id="addcard-close-button"
+          type="button"
+        ></button>
         <p class="modal__heading">New Place</p>
         <form class="modal__form" id="add__card_form">
-          <input class="modal__input modal__input_type_title" id=profile-title-input type="text" name="title" placeholder="Title">
-          <input class="modal__input modal__input_type_url" id=profile-url-input type="text" name="url" placeholder="Image URL">
+          <input
+            class="modal__input modal__input_type_title"
+            id="profile-title-input"
+            type="text"
+            name="title"
+            placeholder="Title"
+          />
+          <input
+            class="modal__input modal__input_type_url"
+            id="profile-url-input"
+            type="text"
+            name="url"
+            placeholder="Image URL"
+          />
           <button class="modal__button" type="submit">Save</button>
         </form>
       </div>
     </div>
 
- <div class="modal" id="card-image-modal">
-      <div class="modal__container_preview">
-        <button class="modal__close" id="profile-close-button" type="button"></button>
-        <img class="modal__image" id="modal-image" src="" alt=""/>
-    <h2 class="modal__title" id="modal-title"></h2>
+    <div class="modal" id="card-image-modal">
+      <div class="modal__container modal__container_preview">
+        <button
+          class="modal__close modal__close-image"
+          id="image-close-button"
+          type="button"
+        ></button>
+        <img class="modal__image" id="modal-image" src="" alt="" />
+        <h2 class="modal__title" id="modal-title"></h2>
       </div>
     </div>
 
     <template id="card-template">
       <li class="card">
-              <img
-                src=""
-                alt=""
-                class="card__image"
-              />
-              <div class="card__description">
-                <h2 class="card__title"></h2>
-                <button class="card__like-button" type="button"></button>
-                 <button class="card__delete-button" type="button"></button>
-              </div>
-            </li>
+        <img src="" alt="" class="card__image" />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button class="card__like-button" type="button"></button>
+          <button class="card__delete-button" type="button"></button>
+        </div>
+      </li>
     </template>
     <script src="./scripts/index.js"></script>
   </body>

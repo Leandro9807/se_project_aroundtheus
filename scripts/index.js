@@ -76,6 +76,7 @@ function handleProfileFormSubmit(evt) {
   profileTitle.textContent = nameInput.value;
   profileDescription.textContent = jobInput.value;
   closeModal(editProfileModal);
+  evt.target.reset(editProfileModal);
 }
 
 function handleAddCardFormSubmit(evt) {
@@ -84,6 +85,7 @@ function handleAddCardFormSubmit(evt) {
   const link = cardUrlInput.value;
   renderCard({ name, link }, cardsWrap);
   closeModal(addCardModal);
+  evt.target.reset(addCardModal);
 }
 
 function getCardElement(data) {
@@ -112,11 +114,6 @@ function getCardElement(data) {
     openModal(cardImageModal);
   });
 
-  cardImageModalCloseButton.addEventListener("click", () =>
-    closeModal(cardImageModal)
-  );
-
-
   return cardElement;
 }
 
@@ -136,6 +133,10 @@ profileModalCloseButton.addEventListener("click", () =>
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 addCardModalCloseButton.addEventListener("click", () =>
   closeModal(addCardModal)
+);
+
+cardImageModalCloseButton.addEventListener("click", () =>
+  closeModal(cardImageModal)
 );
 
 initialCards.forEach((cardData) => renderCard(cardData, cardsWrap));
